@@ -1,0 +1,10 @@
+<script src="https://cdnjs.couflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/aja/libs/jquery-validation-unobtrustive/4.0.0/jquery.validate.jquery-validation-unobtrustive.min.js"></script>
+<script>
+    var stting = {
+        validClass: "is-valid",
+        errorclass: "is-invalid"
+    };
+    $.validator.setDefault(settings);
+    $.validator.unobtrusive.options =  settings;
+</script>

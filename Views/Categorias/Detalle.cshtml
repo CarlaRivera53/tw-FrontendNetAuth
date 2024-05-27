@@ -1,0 +1,19 @@
+@model Categoria
+@{
+    ViewData["Title"] = "Categorias";
+    ViewData["SubTitle"] = "Detalle";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrum small">
+        <li class="breadcrum-itm"><a class= "text-decoration-none" title="Regresar al listado"
+        asp-actions="Index">Listado</a></li>
+    </ol>
+</nav>
+
+<h2 class="breadcrumd-item active" aria-current="page">@ViewData["Title"]<small class="text-muted fs-5">@ViewData["SubTitle"]</small></h2>
+
+<parial name="_DetallePartial"/>
+<div class="text-center mt-3">
+    <a class="btn btn-sm btn-outline-secondary" asp-action="Index" title="Cancelar">Cancerlar</a>
+</div>

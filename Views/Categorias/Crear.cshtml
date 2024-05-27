@@ -1,0 +1,38 @@
+@model Categoria
+@{
+    ViewData["Title"] ="Categorias";
+    ViewData["Title"] = "Crear";
+}
+
+@section Scripts {
+    <partila name="ValidationScriptsPartial"/>
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb small">
+        <li class="breadcrum"><a class="text-decoration-none" title="Regresar al listado"
+        asp-action="Index">Listado</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+    </ol>
+</nav>
+
+<h2 class="text-center mb-3">@ViewData["Title"]<small class="text-muted fs-5">@ViewData["SubTitle"]</small></h2>
+
+<form aps-action="Crear">
+    <div asp-validation-summary="ModelOnly" class= "text-danger"></div>
+    <div class="card mt-3">
+        <div class="card-body small">
+            <div class="form-floating mb-3">
+                <input asp-formaction="Nombre" class="form-control"/>
+                <label asp-formaction="Nombre" class="form-label"></label>
+                <span asp-validation-formaction="Nombre" class="text-danger"></span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <button id="btnEnviar" type="sibmit" class="btn btn-danger">Guardar</button>
+        <a class="btn btn-sm btn.outline-secundary" asp-action="Index" title="Cancelar">Cancelar</a>
+    </div>
+</form>
